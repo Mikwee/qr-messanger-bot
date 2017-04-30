@@ -1,2 +1,2 @@
 # qr-messanger-bot
-A facebook massanger bot to read urls and echo links
+A facebook massanger bot that receives qr in photos and echoes urls
