@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const request = require('request');
 require('dotenv').config()
 
-const PAGE_ACCESS_TOKEN = "EAAau3YEyVjMBAEq5Qe21QOMQ9cRZCaIvZCtSyLOj8GMUraZBVZC8R2nU084kYaLkRtNVfWWVZBqSGYTaBW2Rv8ppBQ6dCu17j9DvN71dK4Nfzrz9grTIGUoYB4Yy4mR7ZB9G2QoXsxVZCWNYQRYFnV9FjtlZCF39T0BvCDqj5XoXZBQZDZD";
+const PAGE_ACCESS_TOKEN = "EAAau3YEyVjMBABnMvLsRR1TdPRAZBVQAalChTD2Nn6NxtcEaAAX9yRjvZBkQOrsbJBgZBhhACmZBlubXvkp3ncLYxW9EMZAD50VjkZCnFGhZC40YwD8kNom5QA04HSq1R0cPCgcFAZCc2RnTalP6Vmkj6tkSTC2lZBOJ6ZAjSNZCjTziAZDZD";
 
 const app = express();
 app.use(bodyParser.json());
