@@ -14,6 +14,11 @@ const server = app.listen(process.env.PORT || 80, () => {
     console.log('STARTING MY QR DECODER ENDPOINT SERVER');
 });
 
+app.get('/', (req, res) => {
+
+    res.status(200).send("tuxedo :)");
+
+});
 
 /* For Facebook Validation */
 app.get('/webhook', (req, res) => {
