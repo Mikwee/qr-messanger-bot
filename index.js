@@ -17,7 +17,7 @@ const server = app.listen(process.env.PORT || 80, () => {
 
 app.get('/', (req, res) => {
 
-    res.status(200).send(PAGE_ACCESS_TOKEN + " aa ");
+    res.status(200).send(" tuxedo ");
 
 });
 
@@ -37,14 +37,13 @@ app.post('/webhook', (req, res) => {
             entry.messaging.forEach((event) => {
                 if (attachment = event.message.attachments) {
 
-                    sendMessage(event.sender.id, "dio");
-
                     var attachment = event.message.attachments[0];
                     if (attachment.type == "image") {
                         //encode url
                         var url = encodeURIComponent(attachment.payload.url).replace(/'/g, "%27").replace(/"/g, "%22");
                         getImgContent(event.sender.id, url);
                     }
+
                 } else {
                     console.log(event.message.text);
                 }
