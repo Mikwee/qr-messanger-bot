@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 const server = app.listen(process.env.PORT || 80, () => {
-    console.log('Express server listening on port %d in %s mode', server.address().port, app.settings.env);
+    console.log('STARTING MY QR DECODER ENDPOINT SERVER');
 });
 
 
@@ -30,6 +30,9 @@ app.post('/webhook', (req, res) => {
         req.body.entry.forEach((entry) => {
             entry.messaging.forEach((event) => {
                 if (attachment = event.message.attachments) {
+
+                    sendMessage(event.sender.id, "dio");
+
                     var attachment = event.message.attachments[0];
                     if (attachment.type == "image") {
                         //encode url
