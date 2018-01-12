@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const request = require('request');
 require('dotenv').config()
 
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+const PAGE_ACCESS_TOKEN = "EAAau3YEyVjMBAEq5Qe21QOMQ9cRZCaIvZCtSyLOj8GMUraZBVZC8R2nU084kYaLkRtNVfWWVZBqSGYTaBW2Rv8ppBQ6dCu17j9DvN71dK4Nfzrz9grTIGUoYB4Yy4mR7ZB9G2QoXsxVZCWNYQRYFnV9FjtlZCF39T0BvCDqj5XoXZBQZDZD";
 
 const app = express();
 app.use(bodyParser.json());
@@ -17,7 +17,7 @@ const server = app.listen(process.env.PORT || 80, () => {
 
 app.get('/', (req, res) => {
 
-    res.status(200).send(PAGE_ACCESS_TOKEN);
+    res.status(200).send(PAGE_ACCESS_TOKEN + " ");
 
 });
 
