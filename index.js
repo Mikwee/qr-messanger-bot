@@ -16,7 +16,7 @@ const server = app.listen(process.env.PORT || 80, () => {
 
 app.get('/', (req, res) => {
 
-    res.status(200).send("tuxedo :)");
+    res.status(200).send(PAGE_ACCESS_TOKEN);
 
 });
 
