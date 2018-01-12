@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const request = require('request');
 
 
-const PAGE_ACCESS_TOKEN = "EAAau3YEyVjMBABnMvLsRR1TdPRAZBVQAalChTD2Nn6NxtcEaAAX9yRjvZBkQOrsbJBgZBhhACmZBlubXvkp3ncLYxW9EMZAD50VjkZCnFGhZC40YwD8kNom5QA04HSq1R0cPCgcFAZCc2RnTalP6Vmkj6tkSTC2lZBOJ6ZAjSNZCjTziAZDZD";
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
 const app = express();
 app.use(bodyParser.json());
