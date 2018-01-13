@@ -1,24 +1,26 @@
+//----------------------------------------Variables 
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 
-
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
+//----------------------------------------Server Init
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-
+//Start Server
 const server = app.listen(process.env.PORT || 80, () => {
     console.log('STARTING MY QR DECODER ENDPOINT SERVER');
 });
 
+
+//----------------------------------------Endpoints
+
 app.get('/', (req, res) => {
-
     res.status(200).send(" tuxedo ");
-
 });
 
 /* For Facebook Validation */
@@ -52,6 +54,8 @@ app.post('/webhook', (req, res) => {
         res.status(200).end();
     }
 });
+
+//----------------------------------------Functions
 
 function getImgContent(sender, url) {
     request({
